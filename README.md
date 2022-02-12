@@ -26,3 +26,13 @@ sudo cp -ax Microsoft /boot/EFI
 ```
 
 https://github.com/spxak1/weywot/blob/main/Pop_OS_Dual_Boot.md#22-how-to-add-an-option-for-windows-in-pop_os-boot-menu
+
+### Installation process
+
+1. Boot into archlinux iso
+2. pacman -Sy git
+3. git clone https://github.com/daviskregers/archlinux-install.git
+4. partition drive (GPT, 512M EFI partition, rest for system)
+5. Optionally setup proxy
+6. cd archlinux-install
+6. ./install-arch.sh 
