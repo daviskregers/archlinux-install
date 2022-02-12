@@ -86,5 +86,6 @@ cat /mnt/etc/fstab
 
 echo -e "${GREEN}Next step - system configuration. Run 'arch-chroot /mnt' and run the configuration script from the /root directory."
 
+cp $PWD/.install_helpers /mnt/root/.bash_helpers
 cp $PWD/.install_helpers /mnt/root/.install_helpers
 cp $PWD/configure-arch.sh /mnt/root/configure-arch.sh
