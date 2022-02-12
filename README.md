@@ -6,6 +6,11 @@ This version has cut off the dotfiles installation part though.
 - The `./install-arch.sh` script is for running into the archlinux installation boot
 - The `./configure-arch.sh` script is for running after the installation, while in `arch-chroot /mnt`.
 
+If you decide to use it - use carefully. It might be broken at times - so no guarantees that it will work or that it doesn't mess anything up.
+
+If you mess something up and things start breaking - it's probably due to mounts. Usually at that stage it's easier to
+restart the machine and start all over.
+
 ### Using pacman proxy
 
 The script will automatically set up pacman mirrors, if you wish to use your own proxy, set an environment variable.
@@ -36,3 +41,16 @@ https://github.com/spxak1/weywot/blob/main/Pop_OS_Dual_Boot.md#22-how-to-add-an-
 5. Optionally setup proxy
 6. cd archlinux-install
 6. ./install-arch.sh 
+
+```console
+$ pacman -Sy git
+$ git clone https://github.com/daviskregers/archlinux-install.git
+$ cfdisk (partition drive - GPT, 512M EFI partition, rest for system)
+$ export ARCHLINUX_PROXY_HOST=... (optional)
+$ ./install-arch.sh 
+$ arch-chroot /mnt
+$ cd /root
+$ ./configure-archlinux.sh 
+$ exit
+$ reboot
+```
