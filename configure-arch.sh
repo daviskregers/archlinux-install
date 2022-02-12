@@ -1,5 +1,5 @@
 #!/bin/bash
-source "../../.bash_helpers"
+source .bash_helpers
 source .install_helpers
 
 PWD=$(pwd)

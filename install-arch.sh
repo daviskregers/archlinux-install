@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euxo pipefail
 
-source "../../.bash_helpers"
+source .bash_helpers
 source .install_helpers
 
 pacman -Sy --noconfirm dialog
